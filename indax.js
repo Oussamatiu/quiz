@@ -19,7 +19,6 @@ function printQuestion() {
     const resulta = document.createElement('h3');
     resulta.textContent = `your score is ${score}/${questions.length}`;
     questionX.appendChild(resulta);
-
   }
   else {
     firstQuestion.textContent = questions[count].question;
@@ -52,18 +51,22 @@ function printQuestion() {
 
     })
     const nextButton = document.createElement('button');
-    nextButton.textContent = 'next';
+    if(count == questions.length-1){
+      nextButton.textContent = 'Terminer';
+    }else {
+      nextButton.textContent = 'Next';
+    }
+    
     nextButton.style.display = 'block';
     const checkActive = document.querySelector('.active');
+
     if(!checkActive){
       nextButton.style.visibility = 'hidden'
     }
-    
 
-  
     btnControle.setAttribute('class','btn-controle');
     const preversButton = document.createElement('button');
-    preversButton.textContent = 'prevers';
+    preversButton.textContent = 'Prevers';
     btnControle.appendChild(preversButton);
     if( count == 0){
       preversButton.style.visibility = 'hidden';

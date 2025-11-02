@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(16, 16, 16);
-    height: 100vh;
-    
-    
+    height: 100vh; 
 }
 .btn-start{
     margin-top: auto;
